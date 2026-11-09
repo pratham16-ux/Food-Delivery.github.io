@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stackly – Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body data-page="login">
+    <div class="auth">
+      <aside class="art">
+        <img class="bgi" alt="" src="https://wsrv.nl/?url=images.unsplash.com/photo-1414235077428-338989a2e8c0&w=1200&output=webp&q=50&fit=cover" />
+        <div>
+          <h2>Gourmet meals, <em>one login</em> away</h2>
+          <p>Order, track and manage everything from your Stackly dashboard.</p>
+        </div>
+      </aside>
+      <main class="panel">
+        <div class="top">
+          <a class="logo" href="index.html"><img alt="Stackly" src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=280&output=webp&q=85&fit=cover" /></a>
+          <a class="back" href="index.html">← Home</a>
+        </div>
+
+        <div id="lv">
+          <h1>Welcome back</h1>
+          <p class="sub">Choose how you want to sign in</p>
+
+          <div class="roles" role="group" aria-label="Login type">
+            <button type="button" class="role on" data-role="customer" aria-pressed="true">
+              <span class="ri">🍽️</span><b>Customer</b><small>Order food &amp; track deliveries</small>
+            </button>
+            <button type="button" class="role" data-role="partner" aria-pressed="false">
+              <span class="ri">👨‍🍳</span><b>Restaurant Partner</b><small>Manage menu &amp; incoming orders</small>
+            </button>
+          </div>
+
+          <div class="note" id="note" hidden></div>
+
+          <form id="af" novalidate>
+            <div class="fld"><label for="em">Email</label><input id="em" name="email" type="email" placeholder="you@example.com" autocomplete="email" /></div>
+            <div class="fld"><label for="pw">Password</label>
+              <div class="pw"><input id="pw" name="pw" type="password" placeholder="Your password" autocomplete="current-password" /><button type="button" class="eye">Show</button></div>
+              <div class="caps" id="caps" hidden>⚠ Caps Lock is on</div>
+            </div>
+            <div class="opts">
+              <label class="chk"><input type="checkbox" id="rm" /><i></i>Remember me</label>
+              <button type="button" class="fp" id="fpb">Forgot password?</button>
+            </div>
+            <div class="err" role="alert"></div>
+            <button class="btn" type="submit">Login as Customer</button>
+          </form>
+
+          <div class="demo"><button type="button" id="demo">Use demo customer account</button></div>
+          <p class="alt">New to Stackly? <a href="signup.html">Create an account</a></p>
+        </div>
+
+        <div id="fv" hidden>
+          <button type="button" class="back2" id="fb">← Back to login</button>
+          <h1>Reset password</h1>
+          <p class="sub">Enter your account email and we'll send you a reset link.</p>
+          <form id="ff" novalidate>
+            <div class="fld"><label for="fe">Email</label><input id="fe" type="email" placeholder="you@example.com" autocomplete="email" /></div>
+            <div class="err" id="fr" role="alert"></div>
+            <button class="btn" type="submit">Send reset link</button>
+          </form>
+          <div id="ok" hidden></div>
+        </div>
+      </main>
+    </div>
+    <script src="js/core.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      (function () {
+        var $ = function (s) { return document.querySelector(s); };
+        var K = "stackly_remember_email";
+        var em = $("#em"), rm = $("#rm"), pw = $("#pw");
+
+        // Remember me: remembers the email address only (never the password)
+        try {
+          var saved = localStorage.getItem(K);
+          if (saved) { em.value = saved; rm.checked = true; }
+        } catch (e) {}
+        $("#af").addEventListener("submit", function () {
+          try {
+            if (rm.checked && em.value.trim()) localStorage.setItem(K, em.value.trim());
+            else localStorage.removeItem(K);
+          } catch (e) {}
+        });
+        // demo button fills the email, so keep the remembered state in sync
+        $("#demo").addEventListener("click", function () {
+          setTimeout(function () { if (rm.checked && em.value.trim()) { try { localStorage.setItem(K, em.value.trim()); } catch (e) {} } }, 0);
+        });
+
+        // Caps Lock hint
+        var caps = $("#caps");
+        function ck(e) { if (e.getModifierState) caps.hidden = !e.getModifierState("CapsLock"); }
+        pw.addEventListener("keydown", ck); pw.addEventListener("keyup", ck);
+        pw.addEventListener("blur", function () { caps.hidden = true; });
+
+        // Forgot password view
+        var lv = $("#lv"), fv = $("#fv"), fe = $("#fe"), ok = $("#ok"), fr = $("#fr");
+        function show(f) {
+          lv.hidden = f; fv.hidden = !f; ok.hidden = true; fr.textContent = "";
+          if (f) { fe.value = em.value; fe.focus(); } else { em.focus(); }
+        }
+        $("#fpb").addEventListener("click", function () { show(true); });
+        $("#fb").addEventListener("click", function () { show(false); });
+        $("#ff").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var v = fe.value.trim();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) { fr.textContent = "Please enter a valid email address."; return; }
+          fr.textContent = "";
+          // TODO: call your backend here (e.g. POST /api/forgot-password with {email: v})
+          ok.textContent = "If an account exists for " + v + ", a reset link has been sent. Please check your inbox.";
+          ok.hidden = false;
+        });
+      })();
+    </script>
+    <script>
+      setTimeout(function () {
+        if (!window.__authReady) {
+          var e = document.querySelector(".err");
+          e.textContent = "Page scripts did not load. Make sure js/core.js and js/auth.js exist next to the pages (js folder).";
+        }
+      }, 600);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stackly – Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="contact">
+    <header id="h">
+      <div class="w nav">
+        <a href="index.html" class="logo"
+          ><img
+            alt="Stackly"
+            src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=280&output=webp&q=85&fit=cover"
+        /></a>
+        <nav id="n">
+          <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="restaurants.html">Restaurants</a
+          ><a href="how-it-works.html">How It Works</a><a href="contact.html" class="on">Contact</a>
+          <a class="nav-login" href="login.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Login</a>
+        </nav>
+        <a class="btn hdr-btn" href="login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Login</span></a>
+        <button class="bg" id="bg" aria-label="Menu"><i></i><i></i><i></i></button>
+      </div>
+    </header>
+    <main id="app">
+      <section class="hero" style="padding: 120px 0 80px">
+        <img
+          fetchpriority="high"
+          srcset="
+            https://wsrv.nl/?url=images.unsplash.com/photo-1482049016688-2d3e1b311543&w=640&output=webp&q=45&fit=cover   640w,
+            https://wsrv.nl/?url=images.unsplash.com/photo-1482049016688-2d3e1b311543&w=1024&output=webp&q=45&fit=cover 1024w,
+            https://wsrv.nl/?url=images.unsplash.com/photo-1482049016688-2d3e1b311543&w=1600&output=webp&q=42&fit=cover 1600w
+          "
+          sizes="100vw"
+          src="https://wsrv.nl/?url=images.unsplash.com/photo-1482049016688-2d3e1b311543&w=1024&output=webp&q=45&fit=cover"
+          alt="Contact Us"
+        />
+        <div class="w">
+          <span class="tag">Contact Us</span>
+          <h1>Let's <em>Talk Food</em></h1>
+          <p>Questions, feedback or partnerships — our team is ready.</p>
+          <div class="row">
+            <a class="btn" href="contact.html">Send Message</a><a class="btn o" href="menu.html">Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="w rv">
+          <div class="mq">
+            <div>
+              <span>Fresh</span><span>Fast</span><span>Premium</span><span>Delivered</span><span>Crafted</span
+              ><span>Hot</span><span>Fresh</span><span>Fast</span><span>Premium</span><span>Delivered</span
+              ><span>Crafted</span><span>Hot</span><span>Fresh</span><span>Fast</span><span>Premium</span
+              ><span>Delivered</span><span>Crafted</span><span>Hot</span><span>Fresh</span><span>Fast</span
+              ><span>Premium</span><span>Delivered</span><span>Crafted</span><span>Hot</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="w rv">
+          <div class="g g3">
+            <div class="card ic">
+              <b>📍</b>
+              <h3>Visit Us</h3>
+              <p>Bengaluru, Karnataka, India</p>
+            </div>
+            <div class="card ic">
+              <b>📞</b>
+              <h3>Call Us</h3>
+              <p>+91 80000 00000</p>
+            </div>
+            <div class="card ic">
+              <b>✉️</b>
+              <h3>Email Us</h3>
+              <p>hello@stackly.in</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="w rv">
+          <div class="hd">
+            <span class="tag">Get In Touch</span>
+            <h2>We'd Love To Hear From You</h2>
+            <p></p>
+          </div>
+          <form
+            style="max-width: 640px"
+            onsubmit="
+              event.preventDefault();
+              this.innerHTML = '<p style=color:var(--gold)>Message sent. We\'ll reply soon ✓</p>';
+            "
+          >
+            <input required placeholder="Name" /><input type="email" required placeholder="Email" /><textarea
+              required
+              placeholder="Message"
+            ></textarea
+            ><button class="btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="w rv">
+          <div class="hd">
+            <span class="tag">Questions</span>
+            <h2>Frequently Asked</h2>
+            <p></p>
+          </div>
+          <details>
+            <summary>How fast is delivery?</summary>
+            <p>Most orders arrive in 25–35 minutes.</p>
+          </details>
+          <details>
+            <summary>Is there a minimum order?</summary>
+            <p>No minimum on orders above your free-delivery threshold.</p>
+          </details>
+          <details>
+            <summary>Can I track my order?</summary>
+            <p>Yes, live rider tracking is built in.</p>
+          </details>
+          <details>
+            <summary>What payment methods?</summary>
+            <p>UPI, cards, wallets and cash on delivery.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="w rv">
+          <div class="hd">
+            <span class="tag">Why Stackly</span>
+            <h2>Delivered With Care</h2>
+            <p></p>
+          </div>
+          <div class="g g3">
+            <div class="card ic">
+              <b>⚡</b>
+              <h3>Lightning Fast</h3>
+              <p>Smart routing for the quickest delivery.</p>
+            </div>
+            <div class="card ic">
+              <b>🌿</b>
+              <h3>Fresh & Quality</h3>
+              <p>Vetted kitchens and premium ingredients.</p>
+            </div>
+            <div class="card ic">
+              <b>🔒</b>
+              <h3>Safe Packaging</h3>
+              <p>Tamper-proof, temperature-held bags.</p>
+            </div>
+            <div class="card ic">
+              <b>💳</b>
+              <h3>Easy Payments</h3>
+              <p>Every method, zero hassle.</p>
+            </div>
+            <div class="card ic">
+              <b>🎁</b>
+              <h3>Rewards</h3>
+              <p>Earn points on every order.</p>
+            </div>
+            <div class="card ic">
+              <b>🎧</b>
+              <h3>24/7 Support</h3>
+              <p>Real humans, always ready.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="w rv">
+          <div class="split" >
+            <div style="direction: ltr">
+              <img
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="600"
+                src="https://wsrv.nl/?url=images.unsplash.com/photo-1540189549336-e6e99c3679fe&w=800&output=webp&q=55&fit=cover"
+                alt="Food"
+              />
+            </div>
+            <div style="direction: ltr">
+              <span class="tag">Careers</span>
+              <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); margin-top: 10px">Join The Stackly Crew</h2>
+              <p>Help us deliver delight to millions of tables.</p>
+              <a class="btn" href="contact.html">See Roles</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="w rv">
+          <div class="g g4 sm">
+            <div class="st">
+              <div class="num"><span data-c="500">0</span>+</div>
+              <span>Partner Kitchens</span>
+            </div>
+            <div class="st">
+              <div class="num"><span data-c="2">0</span>M+</div>
+              <span>Orders Delivered</span>
+            </div>
+            <div class="st">
+              <div class="num"><span data-c="25">0</span>min</div>
+              <span>Avg. Delivery</span>
+            </div>
+            <div class="st">
+              <div class="num"><span data-c="4.9">0</span>★</div>
+              <span>Customer Rating</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="w rv">
+          <div class="hd">
+            <span class="tag">Top Rated</span>
+            <h2>Featured Restaurants</h2>
+            <p></p>
+          </div>
+          <div class="g g3">
+            <div class="card">
+              <div class="im">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="450"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1568901346375-23c9450c58cd&w=600&output=webp&q=55&fit=cover"
+                  alt="The Gilded Fork"
+                />
+              </div>
+              <div class="b">
+                <h3>The Gilded Fork</h3>
+                <p>★ 4.9 · 20–30 min · Free delivery</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="im">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="450"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1513104890138-7c749659a591&w=600&output=webp&q=55&fit=cover"
+                  alt="Ember & Oak"
+                />
+              </div>
+              <div class="b">
+                <h3>Ember & Oak</h3>
+                <p>★ 4.8 · 23–33 min · Free delivery</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="im">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="450"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1555939594-58d7cb561ad1&w=600&output=webp&q=55&fit=cover"
+                  alt="Saffron Table"
+                />
+              </div>
+              <div class="b">
+                <h3>Saffron Table</h3>
+                <p>★ 4.7 · 26–36 min · Free delivery</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="im">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="450"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1567620905732-2d1ec7ab7445&w=600&output=webp&q=55&fit=cover"
+                  alt="Urban Tandoor"
+                />
+              </div>
+              <div class="b">
+                <h3>Urban Tandoor</h3>
+                <p>★ 4.9 · 29–39 min · Free delivery</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="im">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="450"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1565958011703-44f9829ba187&w=600&output=webp&q=55&fit=cover"
+                  alt="La Bella Cucina"
+                />
+              </div>
+              <div class="b">
+                <h3>La Bella Cucina</h3>
+                <p>★ 4.8 · 32–42 min · Free delivery</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="im">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="450"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1482049016688-2d3e1b311543&w=600&output=webp&q=55&fit=cover"
+                  alt="Green Leaf Co."
+                />
+              </div>
+              <div class="b">
+                <h3>Green Leaf Co.</h3>
+                <p>★ 4.7 · 35–45 min · Free delivery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="w rv">
+          <div class="hd">
+            <span class="tag">Love Notes</span>
+            <h2>What Our Customers Say</h2>
+            <p></p>
+          </div>
+          <div class="g g3">
+            <div class="card tt">
+              <div style="color: var(--gold)">★★★★★</div>
+              <p>"Arrived hot, beautifully packed. Easily the best delivery service in the city."</p>
+              <small>— Priya S.</small>
+            </div>
+            <div class="card tt">
+              <div style="color: var(--gold)">★★★★★</div>
+              <p>"The tracking is spot on and the food quality is restaurant-grade every time."</p>
+              <small>— Rahul M.</small>
+            </div>
+            <div class="card tt">
+              <div style="color: var(--gold)">★★★★★</div>
+              <p>"Premium experience from tap to table. My weekend ritual now."</p>
+              <small>— Ananya K.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="w rv">
+          <div class="hd">
+            <span class="tag">Gallery</span>
+            <h2>A Feast For The Eyes</h2>
+            <p></p>
+          </div>
+          <div class="g g4 sm">
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1546069901-ba9599a7e63c&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1568901346375-23c9450c58cd&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1513104890138-7c749659a591&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1555939594-58d7cb561ad1&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1567620905732-2d1ec7ab7445&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1565958011703-44f9829ba187&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1482049016688-2d3e1b311543&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+            <div class="card">
+              <div class="im" style="aspect-ratio: 1">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  src="https://wsrv.nl/?url=images.unsplash.com/photo-1512621776951-a57141f2eefd&w=400&output=webp&q=50&fit=cover"
+                  alt="Food"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="w rv">
+          <div class="hd">
+            <span class="tag">Newsletter</span>
+            <h2>Join the Table</h2>
+            <p>Exclusive offers and new menus, weekly.</p>
+          </div>
+          <form
+            onsubmit="
+              event.preventDefault();
+              this.innerHTML = '<p style=color:var(--gold)>Thank you for subscribing ✓</p>';
+            "
+          >
+            <input type="email" required placeholder="Your email" /><button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="w">
+        <div class="fg">
+          <div>
+            <a class="flogo" href="index.html" aria-label="Stackly home"><img
+              alt="Stackly"
+              src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=280&output=webp&q=85&fit=cover"
+            /></a>
+            <p>Premium food delivery from the city's finest kitchens, to your door in minutes.</p>
+            <div class="soc">
+              <a href="404.html" target="" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V13h2.7v8z"/></svg></a>
+              <a href="404.html" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.2-3.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/></svg></a><a href="404.html" target="" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8Zm-1.1 16.2h1.7L7.4 4.7H5.6Z"/></svg></a><a href="404.html" target="" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 0 0 2.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800ZM10 15V9l5.200 3Z"/></svg></a><a href="404.html" target="" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4.500 3A2 2 0 1 1 4.500 7 2 2 0 0 1 4.500 3ZM3 9h3v12H3Zm5.500 0h2.900v1.700h.1c.4-.8 1.400-1.900 3.200-1.900 3.400 0 4 2.200 4 5.100V21h-3v-6.200c0-1.500 0-3.300-2-3.300s-2.300 1.600-2.300 3.200V21h-3Z"/></svg></a></div>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <a href="index.html">Home</a><a href="menu.html">Menu</a
+            ><a href="restaurants.html">Restaurants</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="how-it-works.html">How It Works</a><a href="contact.html">Contact</a
+            ><a href="contact.html">Careers</a>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <p>hello@stackly.in</p>
+            <p>+91 80000 00000</p>
+            <p>Bengaluru, India</p>
+          </div>
+        </div>
+        <p class="cp">© 2026 Stackly. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

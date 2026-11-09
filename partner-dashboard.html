@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stackly – Partner Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/dash.css" />
+    <script>try{var t=localStorage.getItem("stk-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="side" id="side">
+        <a class="brand" href="index.html"><img alt="Stackly" src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=280&output=webp&q=85&fit=cover" /></a>
+        <div class="mlabel">Manage</div>
+        <nav class="menu" id="navmenu">
+          <a href="#overview" data-t="overview"><span>📊</span>Overview</a>
+          <a href="#orders" data-t="orders"><span>🧾</span>Orders</a>
+          <a href="#menu" data-t="menu"><span>🍽️</span>Menu Items</a>
+          <a href="#profile" data-t="profile"><span>🏪</span>Restaurant</a>
+        </nav>
+        <div class="side-f">
+          <a class="btn sm" href="index.html">🌐 View Website</a>
+          <button class="btn o sm" data-act="logout" type="button">Logout</button>
+        </div>
+      </aside>
+      <div class="scrim" id="scrim"></div>
+      <div class="main">
+        <header class="top">
+          <button class="burger" id="burger" type="button" aria-label="Open menu">☰</button>
+          <div>
+            <span class="crumb">Partner / Dashboard</span>
+            <div class="ttl" id="ttl">Overview</div>
+          </div>
+          <div class="tsp"></div>
+          <button class="ibtn" id="theme" type="button" aria-label="Toggle theme" title="Toggle theme">🌓</button>
+          <div class="who"><span class="chip" id="uid"></span><span class="av" id="av"></span></div>
+        </header>
+        <div class="view" id="view"></div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("theme").addEventListener("click", function () {
+        var r = document.documentElement, n = r.getAttribute("data-theme") === "light" ? "dark" : "light";
+        r.setAttribute("data-theme", n);
+        try { localStorage.setItem("stk-theme", n); } catch (e) {}
+      });
+    </script>
+    <script src="js/core.js"></script>
+    <script src="js/partner.js"></script>
+  </body>
+</html>

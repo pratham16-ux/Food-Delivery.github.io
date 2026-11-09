@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stackly – Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body data-page="signup">
+    <div class="auth">
+      <aside class="art">
+        <img class="bgi" alt="" src="https://wsrv.nl/?url=images.unsplash.com/photo-1555939594-58d7cb561ad1&w=1200&output=webp&q=50&fit=cover" />
+        <div>
+          <h2>Join the <em>Stackly</em> table</h2>
+          <p>Create a free account as a hungry customer or as a restaurant partner.</p>
+        </div>
+      </aside>
+      <main class="panel">
+        <div class="top">
+          <a class="logo" href="index.html"><img alt="Stackly" src="https://wsrv.nl/?url=https://snabsolutions.in/wp-content/uploads/2026/02/stackly-snab-solutions.png&w=280&output=webp&q=85&fit=cover" /></a>
+          <a class="back" href="index.html">← Home</a>
+        </div>
+        <h1>Create account</h1>
+        <p class="sub">I want to join as</p>
+
+        <div class="roles" role="group" aria-label="Account type">
+          <button type="button" class="role on" data-role="customer" aria-pressed="true">
+            <span class="ri">🍽️</span><b>Customer</b><small>Order food &amp; earn rewards</small>
+          </button>
+          <button type="button" class="role" data-role="partner" aria-pressed="false">
+            <span class="ri">👨‍🍳</span><b>Restaurant Partner</b><small>Sell on Stackly</small>
+          </button>
+        </div>
+
+        <form id="af" novalidate>
+          <div class="fld"><label for="fn">Full name</label><input id="fn" name="fullname" placeholder="Your full name" autocomplete="name" /></div>
+          <div class="two">
+            <div class="fld"><label for="em">Email</label><input id="em" name="email" type="email" placeholder="you@example.com" autocomplete="email" /></div>
+            <div class="fld"><label for="ph">Mobile number</label><input id="ph" name="phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="tel" /></div>
+          </div>
+          <div class="two ponly" hidden>
+            <div class="fld"><label for="rn">Restaurant name</label><input id="rn" name="restaurant" placeholder="e.g. Saffron Table" /></div>
+            <div class="fld"><label for="ct">City</label><input id="ct" name="city" placeholder="e.g. Bengaluru" /></div>
+          </div>
+          <div class="two">
+            <div class="fld"><label for="pw">Password</label>
+              <div class="pw"><input id="pw" name="pw" type="password" placeholder="Min 6 characters" autocomplete="new-password" /><button type="button" class="eye">Show</button></div>
+            </div>
+            <div class="fld"><label for="pw2">Confirm password</label>
+              <div class="pw"><input id="pw2" name="pw2" type="password" placeholder="Repeat password" autocomplete="new-password" /><button type="button" class="eye">Show</button></div>
+            </div>
+          </div>
+          <div class="err" role="alert"></div>
+          <button class="btn" type="submit">Create Customer account</button>
+        </form>
+        <div id="ok" role="status" hidden></div>
+        <p class="alt">Already have an account? <a href="login.html">Login</a></p>
+      </main>
+    </div>
+    <script src="js/core.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      setTimeout(function () {
+        if (!window.__authReady) {
+          var e = document.querySelector(".err");
+          e.textContent = "Page scripts did not load. Make sure js/core.js and js/auth.js exist next to the pages (js folder).";
+        }
+      }, 600);
+    </script>
+  </body>
+</html>
